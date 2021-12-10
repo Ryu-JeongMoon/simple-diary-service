@@ -6,6 +6,10 @@ on:
   pull_request:
     branches: [ develop, back-1 ]
 
+defaults:
+  run:
+    working-directory: ./back
+
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -34,4 +38,4 @@ jobs:
       - name: Grant execute permission for gradlew
         run: chmod +x gradlew
       - name: Build with Gradle
-        run: ./gradlew build --parallel
+        run: cd back | ./gradlew build --parallel
