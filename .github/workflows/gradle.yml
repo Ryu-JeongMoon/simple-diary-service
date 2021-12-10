@@ -2,9 +2,9 @@ name: Java CI with Gradle
 
 on:
   push:
-    branches: [ develop, back-1 ]
+    branches: [ develop ]
   pull_request:
-    branches: [ develop, back-1 ]
+    branches: [ develop ]
 
 defaults:
   run:
@@ -30,12 +30,7 @@ jobs:
           java-version: '11'
           distribution: 'adopt'
 
-      - name: Start Redis
-        uses: supercharge/redis-github-action@1.1.0
-        with:
-          redis-version: 6
-
       - name: Grant execute permission for gradlew
         run: chmod +x gradlew
       - name: Build with Gradle
-        run: cd back | ./gradlew build --parallel
+        run: ./gradlew build --parallel
