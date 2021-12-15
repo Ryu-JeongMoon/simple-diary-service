@@ -1,5 +1,5 @@
-import React from 'react';
 import { Test } from '@containers';
+import React from 'react';
 
 const TestPage = () => <Test />;
 

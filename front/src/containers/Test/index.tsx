@@ -1,7 +1,7 @@
-import React, { useEffect, useState } from 'react';
-import { Input } from 'antd';
 import { BaseButton, Text } from '@components';
 import { camelTypography } from '@styles';
+import { Input } from 'antd';
+import React, { useEffect, useState } from 'react';
 
 export const Test = () => {
   const [isComplete, setIsComplete] = useState(false);
@@ -24,10 +24,7 @@ export const Test = () => {
   return (
     <>
       <Input value={text} onChange={onChangeText} />
-      <BaseButton
-        style={{ ...camelTypography.h1 }}
-        isComplete={isComplete}
-        htmlType={'submit'}>
+      <BaseButton style={{ ...camelTypography.h1 }} isComplete={isComplete} htmlType={'submit'}>
         {'로그인'}
       </BaseButton>
       <Text underline>안녕</Text>

@@ -3,43 +3,20 @@
     "jsx": "preserve",
     "strict": true,
     "module": "es2020",
-    "typeRoots": [
-      "node_modules/@types",
-      "./types"
-    ],
+    "typeRoots": ["node_modules/@types", "./types"],
     "baseUrl": ".",
     "paths": {
-      "@components": [
-        "src/components"
-      ],
-      "@atoms": [
-        "src/components/atoms"
-      ],
-      "@containers/*": [
-        "src/containers/*"
-      ],
-      "@assets/*": [
-        "src/assets/*"
-      ],
-      "@styles/*": [
-        "src/styles/*"
-      ],
-      "@hooks/*": [
-        "src/hooks/*"
-      ],
-      "@utils/*": [
-        "src/utils/*"
-      ],
-      "@types/*": [
-        "src/types/*"
-      ]
+      "@components": ["src/components"],
+      "@atoms": ["src/components/atoms"],
+      "@containers/*": ["src/containers/*"],
+      "@assets/*": ["src/assets/*"],
+      "@styles/*": ["src/styles/*"],
+      "@hooks/*": ["src/hooks/*"],
+      "@utils/*": ["src/utils/*"],
+      "@types/*": ["src/types/*"]
     },
     "target": "es6",
-    "lib": [
-      "dom",
-      "dom.iterable",
-      "esnext"
-    ],
+    "lib": ["dom", "dom.iterable", "esnext"],
     "allowJs": true,
     "skipLibCheck": true,
     "forceConsistentCasingInFileNames": true,
@@ -49,12 +26,6 @@
     "resolveJsonModule": true,
     "isolatedModules": true
   },
-  "include": [
-    "next-env.d.ts",
-    "**/*.ts",
-    "**/*.tsx"
-  ],
-  "exclude": [
-    "node_modules"
-  ]
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
+  "exclude": ["node_modules"]
 }
