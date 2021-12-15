@@ -1,8 +1,11 @@
 import React from 'react';
-import PropTypes from 'prop-types';
-import Head from 'next/head';
-import { GlobalStyle } from '@styles';
+
 import 'antd/dist/antd.css';
+import Head from 'next/head';
+import PropTypes from 'prop-types';
+
+import { GlobalStyle } from '@styles';
+
 require('../styles/variables.less');
 
 // import wrapper from '@store/configureStore';

@@ -1,6 +1,9 @@
 import React, { useEffect, useState } from 'react';
+
 import { Input } from 'antd';
+
 import { BaseButton, Text } from '@components';
+
 import { camelTypography } from '@styles';
 
 export const Test = () => {
@@ -9,15 +12,11 @@ export const Test = () => {
 
   const onChangeText = e => {
     setText(e.target.value);
-    console.log('targetValue', e.target.value);
-    console.log('text', text);
   };
 
   useEffect(() => {
     if (text) {
-      console.log('setIsComplete');
       setIsComplete(true);
-      console.log('isComplete', isComplete);
     }
   }, [text]);
 

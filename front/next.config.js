@@ -1,6 +1,6 @@
-const withAntdLess = require('next-plugin-antd-less');
+import withAntdLess from 'next-plugin-antd-less';
 
-module.exports = withAntdLess({
+export default withAntdLess({
   // optional: you can modify antd less variables directly here
   // modifyVars: {
   //   // '@primary-color': 'rgb(255, 0, 212)',
@@ -39,6 +39,7 @@ module.exports = withAntdLess({
     return config;
   },
   plugins: [
+    // eslint-disable-next-line @typescript-eslint/no-var-requires
     require('@babel/plugin-proposal-decorators').default,
     {
       legacy: true,
