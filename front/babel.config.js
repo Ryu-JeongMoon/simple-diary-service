@@ -19,7 +19,7 @@ module.exports = function (api) {
           alias: {
             '@components': './src/components',
             '@atoms': './src/components/atoms',
-            '@containers': './src/containers',
+            '@modules': './src/modules',
             '@assets': './src/assets',
             '@hooks': './src/hooks',
             '@styles': './src/styles',
