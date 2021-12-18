@@ -1,5 +1,5 @@
 // @index('./*', f => `export * from '${f.path}'`)
-export * from './Color';
+export * from './camelTypography';
+export * from './color';
 export * from './GlobalStyle';
 export * from './lowerTypography';
-export * from './camelTypography';
