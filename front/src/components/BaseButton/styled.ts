@@ -1,5 +1,4 @@
-import { Color } from '@styles/color';
-import { lowerTypography } from '@styles/lowerTypography';
+import { Color, lowerTypography } from '@styles';
 import { Button as AntdButton } from 'antd';
 import styled from 'styled-components';
 
