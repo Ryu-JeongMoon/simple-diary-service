@@ -1,4 +1,4 @@
-import { Test } from '@containers';
+import { Test } from '@modules';
 import React from 'react';
 
 const TestPage = () => <Test />;
