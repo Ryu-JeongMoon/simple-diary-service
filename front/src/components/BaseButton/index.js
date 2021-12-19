@@ -1,5 +1,6 @@
-import { ButtonComplete } from './styled';
 import React from 'react';
+import PropTypes from 'prop-types';
+import { ButtonComplete } from './styles';
 
 export const BaseButton = ({ isComplete, children, htmlType, ...props }) => {
   return (
@@ -12,4 +13,10 @@ export const BaseButton = ({ isComplete, children, htmlType, ...props }) => {
       {children}
     </ButtonComplete>
   );
+};
+
+BaseButton.propTypes = {
+  isComplete: PropTypes.bool.isRequired,
+  children: PropTypes.any.isRequired,
+  htmlType: 'button' | 'submit' | 'reset',
 };

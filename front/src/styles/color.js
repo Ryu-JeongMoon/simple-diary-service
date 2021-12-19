@@ -1,5 +1,4 @@
 import { generate } from '@ant-design/colors';
-
 const primary = '#d41414';
 const colors = generate(primary);
 
