@@ -1,5 +1,6 @@
-import { Test } from '@modules';
 import React from 'react';
+
+import { Test } from '@modules';
 
 const TestPage = () => <Test />;
 

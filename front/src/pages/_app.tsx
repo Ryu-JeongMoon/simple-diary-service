@@ -1,7 +1,9 @@
-import { GlobalStyle } from '@styles';
+import React from 'react';
+
 import 'antd/dist/antd.css';
 import Head from 'next/head';
-import React from 'react';
+
+import { GlobalStyle } from '@styles';
 
 require('../styles/variables.less');
 
