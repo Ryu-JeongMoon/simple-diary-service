@@ -1,7 +1,10 @@
-import { BaseButton, Text } from '@components';
-import { camelTypography } from '@styles';
-import { Input } from 'antd';
 import React, { useEffect, useState } from 'react';
+
+import { Input } from 'antd';
+
+import { BaseButton, Text } from '@components';
+
+import { camelTypography } from '@styles';
 
 export const Test = () => {
   const [isComplete, setIsComplete] = useState(false);

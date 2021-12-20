@@ -1,5 +1,6 @@
-import { StyledText } from './styled';
 import React from 'react';
+
+import { StyledText } from './styled';
 
 export const Text = ({ children, ...props }) => {
   return <StyledText {...props}>{children}</StyledText>;

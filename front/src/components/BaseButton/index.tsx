@@ -1,5 +1,6 @@
-import { ButtonComplete } from './styled';
 import React from 'react';
+
+import { ButtonComplete } from './styled';
 
 export const BaseButton = ({ isComplete, children, htmlType, ...props }) => {
   return (
