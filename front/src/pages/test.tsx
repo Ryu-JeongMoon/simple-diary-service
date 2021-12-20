@@ -1,5 +1,6 @@
 import React from 'react';
-import { Test } from '@containers';
+
+import { Test } from '@modules';
 
 const TestPage = () => <Test />;
 
