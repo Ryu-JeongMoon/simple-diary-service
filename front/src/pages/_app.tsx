@@ -1,11 +1,6 @@
-import React from 'react';
-
-import 'antd/dist/antd.css';
-import Head from 'next/head';
-
 import { GlobalStyle } from '@styles';
-
-require('../styles/variables.less');
+import Head from 'next/head';
+import React from 'react';
 
 // import wrapper from '@store/configureStore';
 

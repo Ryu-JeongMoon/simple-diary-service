@@ -1,19 +1,22 @@
-const withAntdLess = require('next-plugin-antd-less');
+// eslint-disable-next-line @typescript-eslint/no-var-requires
+const withBundleAnalyzer = require('@next/bundle-analyzer')({
+  enabled: process.env.ANALYZE === 'true',
+});
 
-module.exports = withAntdLess({
-  // optional: you can modify antd less variables directly here
-  // modifyVars: {
-  //   // '@primary-color': 'rgb(255, 0, 212)',
-  // },
-  // Or better still you can specify a path to a file
-  lessVarsFilePath: './src/styles/variables.less',
-  // optional
-  lessVarsFilePathAppendToEndOfContent: false,
-  // optional https://github.com/webpack-contrib/css-loader#object
-  cssLoaderOptions: {},
-
-  // Other Config Here...
-
+module.exports = withBundleAnalyzer({
+  webpack(config, { webpack }) {
+    const prod = process.env.NODE_ENV === 'production';
+    return {
+      ...config,
+      mode: prod ? 'production' : 'development',
+      devtool: prod ? 'hidden-source-map' : 'eval',
+      plugins: [
+        ...config.plugins,
+        // 다른 쓸데없는 언어 없애주기
+        new webpack.ContextReplacementPlugin(/moment[/\\]locale$/, /^\.\/ko$/),
+      ],
+    };
+  },
   module: {
     rules: [
       {
@@ -23,6 +26,7 @@ module.exports = withAntdLess({
           'style-loader',
           'css-loader',
           'less-loader',
+          'postcss-loader',
         ],
       },
       {
@@ -34,11 +38,8 @@ module.exports = withAntdLess({
   options: {
     presets: ['@babel/preset-react'],
   },
-  // ONLY for Next.js 10, if you use Next.js 11, delete this block
-  webpack(config) {
-    return config;
-  },
   plugins: [
+    // eslint-disable-next-line @typescript-eslint/no-var-requires
     require('@babel/plugin-proposal-decorators').default,
     {
       legacy: true,
