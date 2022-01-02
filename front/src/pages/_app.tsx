@@ -1,6 +1,5 @@
 import { GlobalStyle } from '@styles';
 import Head from 'next/head';
-import PropTypes from 'prop-types';
 import React from 'react';
 
 // import wrapper from '@store/configureStore';
@@ -15,9 +14,5 @@ const App = ({ Component }) => (
     <Component />
   </>
 );
-
-App.propTypes = {
-  Component: PropTypes.elementType.isRequired,
-};
 
 export default App;
