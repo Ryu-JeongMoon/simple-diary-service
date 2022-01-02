@@ -20,6 +20,7 @@ module.exports = function (api) {
             '@components': './src/components',
             '@constants': './src/constants',
             '@modules': './src/modules',
+            '@reducers': './src/reducers',
             '@assets': './src/assets',
             '@hooks': './src/hooks',
             '@styles': './src/styles',
