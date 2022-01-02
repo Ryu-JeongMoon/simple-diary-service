@@ -19,15 +19,10 @@ module.exports = {
   },
   plugins: ['react', 'react-hooks', '@typescript-eslint'],
   rules: {
-    'no-console': 'error',
+    'no-console': 'warn',
     '@typescript-eslint/no-explicit-any': 'off',
     'react-hooks/rules-of-hooks': 'error',
-    'react-hooks/exhaustive-deps': [
-      'warn',
-      {
-        additionalHooks: 'useRecoilCallback',
-      },
-    ],
+    'react-hooks/exhaustive-deps': 'warn',
   },
   settings: {
     react: {
