@@ -8,8 +8,12 @@
     "paths": {
       "@components": ["src/components"],
       "@components/*": ["src/components/*"],
+      "@constants/*": ["src/constants/*"],
+      "@modules": ["src/modules"],
       "@modules/*": ["src/modules/*"],
+      "reducers/*": ["src/reducers/*"],
       "@assets/*": ["src/assets/*"],
+      "@styles": ["src/styles"],
       "@styles/*": ["src/styles/*"],
       "@hooks/*": ["src/hooks/*"],
       "@utils/*": ["src/utils/*"],
