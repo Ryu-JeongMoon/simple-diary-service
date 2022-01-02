@@ -4,7 +4,7 @@ module.exports = function (api) {
     presets: ['next/babel', '@babel/preset-env'],
     plugins: [
       '@babel/plugin-transform-runtime',
-      ['import', { libraryName: 'antd', style: true }, 'syntax-dynamic-import'],
+      ['import', { style: true }, 'syntax-dynamic-import'],
       [
         'babel-plugin-styled-components',
         {
