@@ -1,17 +1,21 @@
-import { GlobalStyle } from '@styles';
-import Head from 'next/head';
 import React from 'react';
+
+import Head from 'next/head';
+
+import { GlobalStyle } from '@styles';
+
+import '../styles/globals.css';
 
 // import wrapper from '@store/configureStore';
 
-const App = ({ Component }) => (
+const App = ({ Component, pageProps }: any) => (
   <>
     <Head>
       <meta charSet='utf-8' />
-      <title>BoilerPlate</title>
+      <title>simple-diary-service</title>
     </Head>
     <GlobalStyle />
-    <Component />
+    <Component {...pageProps} />
   </>
 );
 
